@@ -101,7 +101,6 @@ public class HW10Functions {
         int product;
         
         product = multiplicand*multiplier;
-        
         return product;
         
         
