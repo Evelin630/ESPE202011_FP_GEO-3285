@@ -19,79 +19,69 @@ public class GEOCONVERTER {
     public static void main(String[] args) {
         // TODO code application logic here
         
-         Scanner lector = new Scanner(System.in);
-         boolean mainLoop = true;
-         int option;
+         // DONE
+ // DONE
+ Scanner input = new Scanner(System.in);
+        boolean mainLoop = true;
+        int option;
 
         do {
-            double kilometers;
-            double meters;
-            double centimeters;
-            double millimeters;
-            double nanometers;
-            double inches;
-            double micrometers;
-            double feet;
-            double gigameters;
-            double yard;
             
-            System.out.println("***WELCOME TO GEOCONVERTER***");
-            System.out.println("¿How I can help?");
-            System.out.println("--->1 The  Kilometers to meters.");
-            System.out.println("--->2 The Meters to centimeters.");
-            System.out.println("--->3 The Meters to millimeters");
-            System.out.println("--->4 The Meters to nanometers.");
-            System.out.println("--->5 The Meters to feet.");
-            System.out.println("--->6 The Meters to inches.");
-            System.out.println("--->7 The Centimeters to micrometers.");
-            System.out.println("--->8 The Centimeters to inches.");
-            System.out.println("--->9 The Millimeters to nanometers.");
-            System.out.println("--->10 The Kilometers to centimeters.");
+            printVariables();
+            
+            printConverterMenu();
+            option = input.nextInt();
 
-            System.out.println(" *==Enter  menu option*== ");
-             Scanner input = null ;   
-             option = input.nextInt();
-
-             switch (option) {
+            switch (option) {
 
                 case 1:
-                    runforKilometerstSetometers(input);
+                    printFormKilometersToMeters(input);
                     break;
                 case 2:
-                    runforMeterstocentimeters(input);
+                    printForMetersToCentimeters(input);
                     break;
                 case 3:
-                    runforMeterstomillimeters(input);
+                    printForMeterstoMillimeters(input);
                     break;
                 case 4:
-                    runforMeterstonanometers(input);
+                    printForMetersToNanometers(input);
                     break;
 
                 case 5:
-                    runforMeterstofeet(input);
+                    printForMetersToFeet(input);
                     break;
 
                 case 6:
-                    runforMeterstoinches(input);
+                    printForMetersToInches(input);
                     break;
 
                 case 7:
-                    runforCentimeterstomicrometers(input);
+                    printForCentimetersToMicrometers(input);
                     break;
                 case 8:
-                    runforCentimeterstoinches(input);
+                    printForCentimetersToInches(input);
                     break;
 
                 case 9:
-                    runforMilllimeterstonanometers(input);
+                    printForMilllimetersToNanometers(input);
                     break;
 
                 case 10:
-                    runforKilometerstocentimeters(input);
+                    printForKilometersToCentimeters(input);
+                    break;
+                case 11:
+                    printForMilesToMeters(input);
                     break;
 
+                case 12:
+                    printForMetersToYards(input);
+                    break;
+
+                case 13:
+                    printForGigametersToMeters(input);
+                    break;
                 case 14:
-                    System.out.println("*====GOOD BYE USER ====*");
+                    System.out.println("====GOOD BYE USER ====");
                     System.exit(0);
                     break;
 
@@ -104,98 +94,151 @@ public class GEOCONVERTER {
 
     }
 
-    private static void runforKilometerstocentimeters(Scanner input) {
-        int kilometers;
-        int centimeters;
-        System.out.println("**Enter the number** ");
+    private static void printForGigametersToMeters(Scanner input) {
+        System.out.println("enter enter the data --> ");
+        double gigameters = input.nextDouble();
+        double meters = gigameters * 1000000000;
+        System.out.println(gigameters + " gigameters is equal to " + meters + " meters\n ");
+    }
+
+    private static void printForMetersToYards(Scanner input) {
+        System.out.println("enter enter the data --> ");
+        double meters = input.nextDouble();
+        double yard = meters * 1.09361;
+        System.out.println(meters + " meters is equal to " + yard + " yard\n ");
+    }
+
+    private static void printForMilesToMeters(Scanner input) {
+        System.out.println("enter enter the data --> ");
+        double miles = input.nextDouble();
+        double meters = miles * 1609.344;
+        System.out.println(miles + "miles is equal to " + meters + " meters\n ");
+    }
+
+    private static void printConverterMenu() {
+        System.out.println("**WELCOME TO GEOCONVERTER**");
+        System.out.println("¿How I can help?");
+        System.out.println("--->1 The  Kilometers to meters");
+        System.out.println("--->2 The Meters to centimeters");
+        System.out.println("--->3 The Meters to millimeters");
+        System.out.println("--->4 The Meters to nanometers");
+        System.out.println("--->5 The Meters to feet");
+        System.out.println("--->6 The Meters to inches");
+        System.out.println("--->7 The Centimeters to micrometers");
+        System.out.println("--->8 The Centimeters to inches");
+        System.out.println("--->9 The Millimeters to nanometers");
+        System.out.println("--->10 The Kilometers to centimeters");
+        System.out.println("--->11 The Miles to meters");
+        System.out.println("--->12 The Meters to yards");
+        System.out.println("--->13 The Gigameters to meters");
+        System.out.println("--->14 Exit");
+        
+        System.out.println(" ==Enter  menu option== ");
+    }
+
+    private static void printVariables() {
+        double kilometers;
+        double meters;
+        double centimeters;
+        double millimeters;
+        double nanometers;
+        double inches;
+        double micrometers;
+        double feet;
+        double gigameters;
+        double yard;
+    }
+
+    private static void printForKilometersToCentimeters(Scanner input) {
+        double kilometers;
+        double centimeters;
+        System.out.println("*Enter the number* ");
         kilometers = input.nextInt();
         centimeters = kilometers * 100000;
         System.out.println(kilometers + " kilometers is equal to " + centimeters + " centimeters\n ");
     }
 
-    private static void runforMilllimeterstonanometers(Scanner input) {
-        int millimeters;
-        int nanometers;
-        System.out.println("**Enter the number** ");
+    private static void printForMilllimetersToNanometers(Scanner input) {
+        double millimeters;
+        double nanometers;
+        System.out.println("*Enter the number* ");
         millimeters = input.nextInt();
         nanometers = millimeters * 1000000;
         System.out.println(millimeters + " millimeters is equal to " + nanometers + " nanometers\n ");
     }
 
-    private static void runforCentimeterstoinches(Scanner input) {
-        int centimeters;
-        int inches;
-        System.out.println("**Enter the number** ");
+    private static void printForCentimetersToInches(Scanner input) {
+        double centimeters;
+        double inches;
+        System.out.println("*Enter the number* ");
         centimeters = input.nextInt();
         inches = (int) (centimeters * 0.3937);
         System.out.println(centimeters + " centimeters is equal to " + inches + " inches\n ");
     }
 
-    private static void runforCentimeterstomicrometers(Scanner input) {
-        int centimeters;
-        int micrometers;
-        System.out.println("**Enter the number** ");
+    private static void printForCentimetersToMicrometers(Scanner input) {
+        double centimeters;
+        double micrometers;
+        System.out.println("*Enter the number* ");
         centimeters = input.nextInt();
         micrometers = centimeters * 10000000;
         System.out.println(centimeters + " centimeters is equal to " + micrometers + " micrometers\n ");
     }
 
-    private static void runforMeterstoinches(Scanner input) {
-        int meters;
-        int inches;
-        System.out.println("**Enter the number** ");
+    private static void printForMetersToInches(Scanner input) {
+        double meters;
+        double inches;
+        System.out.println("*Enter the number* ");
         meters = input.nextInt();
         inches = (int) (meters * 39.37);
         System.out.println(meters + " meters is equal to " + inches + " inches\n ");
     }
 
-    private static void runforMeterstofeet(Scanner input) {
-        int meters;
-        int feet;
-        System.out.println("**Enter the number** ");
+    private static void printForMetersToFeet(Scanner input) {
+        double meters;
+        double feet;
+        System.out.println("*Enter the number* ");
         meters = input.nextInt();
         feet = (int) (meters * 3.281);
         System.out.println(meters + " meters is equal to " + feet + " feet\n ");
     }
 
-    private static void runforMeterstonanometers(Scanner input) {
-        int meters;
-        int nanometers;
-        System.out.println("**Enter the number** ");
+    private static void printForMetersToNanometers(Scanner input) {
+        double meters;
+        double nanometers;
+        System.out.println("*Enter the number* ");
         meters = input.nextInt();
         nanometers = meters * 1000000000;
         System.out.println(meters + " meters is equal to " + nanometers + " nanometers\n ");
     }
 
-    private static void runforMeterstomillimeters(Scanner input) {
-        int meters;
-        int millimeters;
-        System.out.println("**Enter the number** ");
+    private static void printForMeterstoMillimeters(Scanner input) {
+        double meters;
+        double millimeters;
+        System.out.println("*Enter the number* ");
         meters = input.nextInt();
         millimeters = meters * 1000;
         System.out.println(meters + " meters is equal to " + millimeters + " millimeters\n ");
     }
 
-    private static void runforMeterstocentimeters(Scanner input) {
-        int meters;
-        int centimeters;
-        System.out.println("**Enter the number** ");
+    private static void printForMetersToCentimeters(Scanner input) {
+        double meters;
+        double centimeters;
+        System.out.println("*Enter the number* ");
         meters = input.nextInt();
         centimeters = meters * 100;
         System.out.println(meters + " meters is equal to " + centimeters + " centimeters\n ");
     }
 
-    private static void runformKilometerstometers(Scanner input) {
-        int kilometers;
-        int meters;
-        System.out.println("**Enter the number**");
+    private static void printFormKilometersToMeters(Scanner input) {
+        double kilometers;
+        double meters;
+        System.out.println("*Enter the number*");
         kilometers = input.nextInt();
         meters = kilometers * 1000;
         System.out.println(kilometers + " Kilometers is equal to " + meters + " meters\n ");
     }
 
-    private static void runforKilometerstSetometers(Scanner input) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+}
 
-
+}
