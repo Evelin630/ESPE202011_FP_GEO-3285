@@ -55,7 +55,7 @@ public class HS13 {
                 System.out.println("Formula: Vf = Vo - g*t");
             } else if (leave.equals("3")) {
                 System.out.println("Acceleration Formula");
-                System.out.println("dv = vf â€“ vi");
+                System.out.println(" dv = vf – vi,");
             }
         }
         
