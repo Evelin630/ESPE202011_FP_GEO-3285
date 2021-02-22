@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package quizarrays;
+package correctionquiz;
 
 import java.util.Scanner;
 
@@ -11,14 +11,14 @@ import java.util.Scanner;
  *
  * @author Sony
  */
-public class QuizArrays {
+public class CorrectionQuiz {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-   
+        
         int[] Farm;
         String[] Animals = {"Caballo", "Vaca", "Perro", "Conejo", "Pato",};
         float[] Animalsweight = { 100,5F, 255,2F, 185,6F, 186,3F, 195,4F};
@@ -45,10 +45,8 @@ public class QuizArrays {
            int[] farm;
            
               
-      
-        
         }
-        
+       
         for (int animal: Farm) {
             System.out.println("animals of farm are " + animal);
         
@@ -58,16 +56,13 @@ public class QuizArrays {
             System.out.println("animals of the farm " + (i + 1) + " -> " + Farm[i]);
         }
 
-        for (String animal : animals) {
-            System.out.println("animal name -> " + animal);
+        for (String animal : Animals) {
+            System.out.println("animal name -> " + Animals);
         }
 
-         for (int i = 0; i < Animalsweight.length ; i++) {
+        for (int i = 0; i < Animalsweight.length ; i++) {
             System.out.println("animals of weigh" + (i + 1) + " -> " +  Animalsweight [i]);
              }
 
-            
-
-            
-
-            
+    
+}
