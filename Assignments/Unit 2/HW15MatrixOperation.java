@@ -22,7 +22,7 @@ public class HW15MatrixOperation {
         Scanner input = new Scanner(System.in);
         
         
-        System.out.println(" ?Hello? ");
+        System.out.println(" ☀Hello☀ ");
         System.out.println("My name is Evelyn");
         System.out.println("-----Welcome to the calculator to Matrix Multiplication-----");
        
@@ -51,7 +51,8 @@ public class HW15MatrixOperation {
 
         System.out.println("Matrix B data:");
         for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < columns; j++) {
+            for (int j = 0; j < columns; j++) {4
+                    
                 System.out.print("Enter a number for the position: b[" + i + "][" + j + "] " + " of matrix B --> ");
                 matrixB[i][j] = input.nextInt();
 
@@ -84,7 +85,7 @@ public class HW15MatrixOperation {
 
         }
  
-        System.out.println("\n The subtraction of the matrices is");
+        System.out.println("\n The multiplication of the matrices is");
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
                 System.out.print("\t" + matrixMultiplication[i][j]);
