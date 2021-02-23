@@ -51,8 +51,7 @@ public class HW15MatrixOperation {
 
         System.out.println("Matrix B data:");
         for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < columns; j++) {4
-                    
+            for (int j = 0; j < columns; j++) {
                 System.out.print("Enter a number for the position: b[" + i + "][" + j + "] " + " of matrix B --> ");
                 matrixB[i][j] = input.nextInt();
 
