@@ -42,7 +42,7 @@ public class HW15MatrixOperation {
         System.out.println("Matrix A data:");
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                System.out.print("Enter a number for the position: a[" + i + "][" + j + "] " + " of matrix A --> ");
+                System.out.print(" the position: a[" + i + "][" + j + "] " + " --> ");
                 matrixA[i][j] = input.nextInt();
 
             }
@@ -52,13 +52,13 @@ public class HW15MatrixOperation {
         System.out.println("Matrix B data:");
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                System.out.print("Enter a number for the position: b[" + i + "][" + j + "] " + " of matrix B --> ");
+                System.out.print("the position: b[" + i + "][" + j + "] " + " --> ");
                 matrixB[i][j] = input.nextInt();
 
             }
         }
         System.out.println();
-        System.out.println("Matrix structure A");
+        System.out.println("Matrix A");
         
         for (int i = 0; i < matrixA.length; i++) {
             for (int j = 0; j < matrixA[i].length; j++) {
@@ -68,7 +68,7 @@ public class HW15MatrixOperation {
         }
         
         System.out.println();
-        System.out.println("Matrix structure B");
+        System.out.println("Matrix B");
         
         for (int i = 0; i < matrixB.length; i++) {
             for (int j = 0; j < matrixB[i].length; j++) {
