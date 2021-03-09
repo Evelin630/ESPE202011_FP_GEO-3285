@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author So
+ * @author Sony
  */
 public class SanchezEQ11Java {
 
