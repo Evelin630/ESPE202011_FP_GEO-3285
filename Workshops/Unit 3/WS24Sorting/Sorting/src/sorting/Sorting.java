@@ -20,7 +20,7 @@ public class Sorting {
 
         System.out.println("Unsorted integers");
         printArray(integersToSort);
-        sortByBubbleSort(integersToSort);
+        BubbleSort.sort(integersToSort);
         System.out.println("");
         printArray(integersToSort);
 
@@ -28,39 +28,12 @@ public class Sorting {
 
         System.out.println("Unsorted integers");
         printArray(integersToSort2);
-        sortByBubbleSort(integersToSort2);
+        BubbleSort.sort(integersToSort2);
         System.out.println("");
         printArray(integersToSort2);
 
     }
 
-    public static void sortByBubbleSort(int integers[]) {
-
-        //for (int i = 0; i < integers.length - 1; i++) {
-        //
-        //}
-        int n = integers.length;
-        int temp;
-        for (int i = 0; i < n - 1; i++) {
-            for (int j = 0; j < n - i - 1; j++) {
-                if(integers[j] > integers[j+1])
-                {
-                    //swap
-                    temp = integers[j];
-                    integers[j] = integers[j+1];
-                    integers[j+1] = temp;
-
-                }
-                System.out.print("sorting --> ");
-                printArray(integers);
-
-            }
-            System.out.println("");
-
-        }
-
-
-    }
 
     public static void printArray(int[] integers){
         int n = integers.length;
