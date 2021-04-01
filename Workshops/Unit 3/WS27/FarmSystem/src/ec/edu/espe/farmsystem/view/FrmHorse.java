@@ -43,6 +43,9 @@ public class FrmHorse extends javax.swing.JFrame {
         cmbWeight = new javax.swing.JComboBox<>();
         txtScientificName = new javax.swing.JTextField();
         btnSave = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        txtAreHorses = new javax.swing.JTextArea();
+        btnShowHorses = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -66,6 +69,17 @@ public class FrmHorse extends javax.swing.JFrame {
         btnSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSaveActionPerformed(evt);
+            }
+        });
+
+        txtAreHorses.setColumns(20);
+        txtAreHorses.setRows(5);
+        jScrollPane1.setViewportView(txtAreHorses);
+
+        btnShowHorses.setText("Show Horses");
+        btnShowHorses.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnShowHorsesActionPerformed(evt);
             }
         });
 
@@ -96,9 +110,14 @@ public class FrmHorse extends javax.swing.JFrame {
                             .addComponent(cmbWeight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtScientificName, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(99, 99, 99)
-                        .addComponent(btnSave)))
-                .addContainerGap(113, Short.MAX_VALUE))
+                        .addGap(58, 58, 58)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnSave)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnShowHorses))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(111, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -126,8 +145,12 @@ public class FrmHorse extends javax.swing.JFrame {
                     .addComponent(jLabel6)
                     .addComponent(txtScientificName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(btnSave)
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnSave)
+                    .addComponent(btnShowHorses))
+                .addContainerGap())
         );
 
         pack();
@@ -157,6 +180,12 @@ public class FrmHorse extends javax.swing.JFrame {
          
         
     }//GEN-LAST:event_btnSaveActionPerformed
+
+    private void btnShowHorsesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnShowHorsesActionPerformed
+
+        HorseController horseController = new HorseController();
+        txtAreHorses.setText(horseController.read());
+    }//GEN-LAST:event_btnShowHorsesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -195,6 +224,7 @@ public class FrmHorse extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSave;
+    private javax.swing.JButton btnShowHorses;
     private javax.swing.JComboBox<String> cmbColor;
     private javax.swing.JComboBox<String> cmbWeight;
     private javax.swing.JLabel jLabel1;
@@ -203,7 +233,9 @@ public class FrmHorse extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField txtAge;
+    private javax.swing.JTextArea txtAreHorses;
     private javax.swing.JTextField txtName;
     private javax.swing.JTextField txtScientificName;
     // End of variables declaration//GEN-END:variables

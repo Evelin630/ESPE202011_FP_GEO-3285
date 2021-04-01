@@ -6,6 +6,7 @@
 package ec.edu.espe.farmsystem.controller;
 
 import ec.edu.espe.farmsystem.model.Horse;
+import java.io.FileReader;
 import utils.FileManager;
 
 /**
@@ -16,11 +17,25 @@ public class HorseController {
     
     public void save(Horse horse){
         
-        String data = horse.getName() + "," + horse.getColor() + "," + horse.getAge() + "," + horse.getScientificname() + "," + horse.getWeight();
+        String data = horse.getName() + ";" + horse.getColor() + ";" + horse.getAge() + ";" + horse.getScientificname() + ";" + horse.getWeight();
         FileManager.save(data, "horse");
         
-        
-        
+    }    
+     public String read(){
+         String data;
+         data = FileManager.read("horses");
+         return data;
+         
+         
         
     }
-}
+     
+
+       
+   }
+   
+  
+  
+  
+
+
