@@ -260,13 +260,15 @@ public class FrmUniversity extends javax.swing.JFrame {
         public UniversityController() {
         }
 
+        private void save(University university) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
         private String read() {
             throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         }
 
-        private void save(University university) {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
+    
     }
 
        
@@ -274,4 +276,4 @@ public class FrmUniversity extends javax.swing.JFrame {
   }
 
     
-}
+
